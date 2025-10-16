@@ -1,121 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Web Arena - Coming Soon</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'orbitron': ['Orbitron', 'sans-serif'],
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Infinite Web Arena - Coming Soon</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            orbitron: ["Orbitron", "sans-serif"],
+                        },
                     },
+                },
+            };
+        </script>
+    </head>
+    <body class="min-h-screen font-orbitron overflow-x-hidden" style="background: #0e0c16 url('bg.webp') center/cover no-repeat">
+        <div class="relative min-h-screen flex flex-col xl:flex-row">
+            <!-- Content Section -->
+            <div
+                class="relative w-full xl:w-[55%] flex items-center px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-16 lg:py-16 xl:px-20 xl:py-20 z-[2] text-center xl:text-left bg-white/5 backdrop-blur-sm xl:[clip-path:polygon(0_0,100%_0,85%_100%,0_100%)]"
+            >
+                <div class="max-w-xl xl:max-w-[600px] w-full mx-auto xl:mx-0">
+                    <h1
+                        id="typing-text"
+                        class="text-4xl sm:text-5xl md:text-6xl xl:text-[4.25rem] font-black leading-tight mb-6 xl:mb-8 text-pink-200 uppercase tracking-wider [text-shadow:0_0_20px_rgb(244_51_155),0_0_45px_rgb(244_51_155)] min-h-[9rem] sm:min-h-[10rem] md:min-h-[12rem] xl:min-h-[13rem]"
+                    >
+                        <span id="typed-text"></span>
+                    </h1>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-5 max-w-xl mx-auto xl:mx-0">
+                        <div class="bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5 border border-white/20">
+                            <div id="days" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
+                            <div class="text-[9px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tight sm:tracking-wider">Days</div>
+                        </div>
+                        <div class="bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5 border border-white/20">
+                            <div id="hours" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
+                            <div class="text-[9px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tight sm:tracking-wider">Hours</div>
+                        </div>
+                        <div class="bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5 overflow-hidden border border-white/20">
+                            <div id="minutes" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
+                            <div class="text-[8px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tighter sm:tracking-wider truncate">Minutes</div>
+                        </div>
+                        <div class="bg-black/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5 overflow-hidden border border-white/20">
+                            <div id="seconds" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
+                            <div class="text-[8px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tighter sm:tracking-wider truncate">Seconds</div>
+                        </div>
+                    </div>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-pink-300/90 uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-6 sm:mt-8 font-bold flex items-center justify-center xl:justify-start gap-2">
+                        <span class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white">🚀</span>
+                        <span>Launching Oct 21st</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Banner Section -->
+            <div class="xl:absolute xl:top-0 xl:right-0 xl:w-[45%] xl:h-full flex justify-center items-center p-6 sm:p-8 md:p-12 lg:p-16 xl:p-[100px] z-[1] min-h-[60vh] sm:min-h-[70vh] xl:min-h-0">
+                <div class="h-full xl:w-full xl:h-auto p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 rounded-[50px] sm:rounded-[60px] md:rounded-[70px] flex justify-center items-center bg-gradient-to-r from-[#cb587e] to-[#145cc2] shadow-lg">
+                    <img src="banner.gif" alt="Coming Soon" class="w-full h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] lg:max-h-[85vh] xl:max-h-[92vh] object-contain rounded-[40px] sm:rounded-[45px] md:rounded-[50px] block" />
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Typing effect - full text with line breaks
+            const textParts = [
+                { text: "Infinite", addBreak: true },
+                { text: "Web Arena", addBreak: true },
+                { text: "Platform", addBreak: false }
+            ];
+            let partIndex = 0;
+            let charIndex = 0;
+            const typingSpeed = 100;
+            const pauseBeforeRestart = 2000;
+
+            function typeText() {
+                const currentPart = textParts[partIndex];
+                const typedElement = document.getElementById("typed-text");
+                
+                if (charIndex < currentPart.text.length) {
+                    // Type next character
+                    const currentText = typedElement.innerHTML;
+                    typedElement.innerHTML = currentText + currentPart.text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, typingSpeed);
+                } else {
+                    // Part complete, add line break if needed
+                    if (currentPart.addBreak) {
+                        typedElement.innerHTML += '<br> ';
+                    }
+                    
+                    // Move to next part
+                    partIndex++;
+                    charIndex = 0;
+                    
+                    if (partIndex < textParts.length) {
+                        setTimeout(typeText, 200);
+                    } else {
+                        // All parts complete, pause then restart
+                        setTimeout(() => {
+                            typedElement.innerHTML = "";
+                            partIndex = 0;
+                            charIndex = 0;
+                            setTimeout(typeText, 500);
+                        }, pauseBeforeRestart);
+                    }
                 }
             }
-        }
-    </script>
-</head>
-<body class="min-h-screen font-orbitron overflow-x-hidden bg-gradient-to-b from-black via-slate-950 to-purple-950">
-    <div class="relative min-h-screen flex flex-col xl:flex-row">
-        <!-- Content Section -->
-        <div class="relative w-full xl:w-[55%] flex items-center px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-16 lg:py-16 xl:px-20 xl:py-20 z-[2] text-center xl:text-left bg-purple-900 xl:[clip-path:polygon(0_0,100%_0,85%_100%,0_100%)]">
-            <div class="max-w-lg xl:max-w-[600px] w-full mx-auto xl:mx-0">
-                <h1 id="typing-text" class="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black leading-normal sm:leading-relaxed mb-6 xl:mb-8 text-white uppercase tracking-wider [text-shadow:0_0_30px_rgba(168,85,247,1),0_0_50px_rgba(168,85,247,0.7),0_0_80px_rgba(168,85,247,0.5),2px_2px_4px_rgba(0,0,0,0.5)] min-h-[80px] sm:min-h-[100px] md:min-h-[120px] xl:min-h-[150px]">
-                    <span id="typed-text"></span>
-                </h1>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-5 max-w-xl mx-auto xl:mx-0">
-                    <div class="bg-black/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5">
-                        <div id="days" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
-                        <div class="text-[9px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tight sm:tracking-wider">Days</div>
-                    </div>
-                    <div class="bg-black/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5">
-                        <div id="hours" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
-                        <div class="text-[9px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tight sm:tracking-wider">Hours</div>
-                    </div>
-                    <div class="bg-black/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5 overflow-hidden">
-                        <div id="minutes" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
-                        <div class="text-[8px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tighter sm:tracking-wider truncate">Minutes</div>
-                    </div>
-                    <div class="bg-black/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5 overflow-hidden">
-                        <div id="seconds" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1 sm:mb-2">00</div>
-                        <div class="text-[8px] sm:text-xs md:text-sm text-gray-300 uppercase tracking-tighter sm:tracking-wider truncate">Seconds</div>
-                    </div>
-                </div>
-                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-pink-200 uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-6 sm:mt-8 font-bold flex items-center justify-center xl:justify-start gap-2">
-                    <span class="text-xl sm:text-2xl md:text-3xl lg:text-4xl">🚀</span>
-                    <span>Left to Launch</span>
-                </p>
-            </div>
-        </div>
-        
-        <!-- Banner Section -->
-        <div class="xl:absolute xl:top-0 xl:right-0 xl:w-[45%] xl:h-full flex justify-center items-center p-6 sm:p-8 md:p-12 lg:p-16 xl:p-[100px] z-[1] min-h-[60vh] sm:min-h-[70vh] xl:min-h-0">
-            <div class="h-full xl:w-full xl:h-auto p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8 rounded-[50px] sm:rounded-[60px] md:rounded-[70px] flex justify-center items-center bg-gradient-to-br from-[rgba(255,0,110,0.25)] to-[rgba(147,51,234,0.25)] shadow-lg">
-                <img src="banner.gif" alt="Coming Soon" class="w-full h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] lg:max-h-[85vh] xl:max-h-[92vh] object-contain rounded-[40px] sm:rounded-[45px] md:rounded-[50px] block">
-            </div>
-        </div>
-    </div>
 
-    <script>
-        // Typing effect - loops forever
-        const text = "Infinite Web Arena";
-        let index = 0;
-        const typingSpeed = 100;
-        const pauseBeforeRestart = 2750;
+            // Start typing when page loads
+            window.addEventListener("load", () => {
+                setTimeout(typeText, 500);
+            });
 
-        function typeText() {
-            if (index < text.length) {
-                document.getElementById('typed-text').textContent += text.charAt(index);
-                index++;
-                setTimeout(typeText, typingSpeed);
-            } else {
-                // Pause, then clear and restart
-                setTimeout(() => {
-                    document.getElementById('typed-text').textContent = '';
-                    index = 0;
-                    setTimeout(typeText, 500);
-                }, pauseBeforeRestart);
+            // Countdown timer - October 21st, 2025 at 12:00 PM UTC
+            const countdownDate = new Date('2025-10-21T00:00:00Z').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = String(days).padStart(2, "0");
+                document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+                document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+                document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+
+                if (distance < 0) {
+                    document.getElementById("days").textContent = "00";
+                    document.getElementById("hours").textContent = "00";
+                    document.getElementById("minutes").textContent = "00";
+                    document.getElementById("seconds").textContent = "00";
+                }
             }
-        }
 
-        // Start typing when page loads
-        window.addEventListener('load', () => {
-            setTimeout(typeText, 500);
-        });
-
-        // Countdown timer - 7 days from now
-        const countdownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-            }
-        }
-
-        // Update countdown every second
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
-</body>
+            // Update countdown every second
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        </script>
+    </body>
 </html>
